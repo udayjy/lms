@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+      stages {
+        stage('git clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/KonaMarsTech/lms-public.git'
+            }
+        }
+        stage('code build') {
+            steps {
+                sh 'cd webapp && npm install'
+                sh 'cd webapp && npm run build'
+            }
+        }
+    }
+}    
