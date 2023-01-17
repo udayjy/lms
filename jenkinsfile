@@ -8,8 +8,8 @@ pipeline {
         }
         stage('code build') {
             steps {
-                sh 'cd webapp && npm install'
-                sh 'cd webapp && npm run build'
+                -bash 'cd webapp && npm install'
+                -bash 'cd webapp && npm run build'
             }
         }
     }
