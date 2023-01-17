@@ -3,7 +3,7 @@ pipeline {
       stages {
         stage('git clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/KonaMarsTech/lms-public.git'
+                git branch: 'main', url: 'https://github.com/udayjy/lms.git'
             }
         }
         stage('code build') {
